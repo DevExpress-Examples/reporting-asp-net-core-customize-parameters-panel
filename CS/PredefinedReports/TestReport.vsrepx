@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.2.6.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" PageWidth="850" PageHeight="1100" Version="21.2" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="1" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Description="Order Dates:" ValueSourceSettings="#Ref-2" Name="orderDates" Type="#Ref-3" />
+    <Item2 Ref="6" Description="Company Name:" Name="company" />
+    <Item3 Ref="7" Description="Customer Name:" Name="customer" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="8" ControlType="TopMarginBand" Name="TopMargin" />
+    <Item2 Ref="9" ControlType="BottomMarginBand" Name="BottomMargin" />
+    <Item3 Ref="10" ControlType="DetailBand" Name="Detail">
+      <Controls>
+        <Item1 Ref="11" ControlType="XRLabel" Name="xrLabel3" Multiline="true" Text="Customer: [?customer]" TextAlignment="TopLeft" SizeF="650,23" LocationFloat="0,45.99997" Padding="2,2,0,0,100">
+          <StylePriority Ref="12" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="13" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Text="Company: [?company]" TextAlignment="TopLeft" SizeF="650,23" LocationFloat="0,22.99999" Padding="2,2,0,0,100">
+          <StylePriority Ref="14" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="15" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="Order dates: [?orderDates_Start] - [?orderDates_End]" TextAlignment="TopLeft" SizeF="650,23" LocationFloat="0,0" Padding="2,2,0,0,100">
+          <StylePriority Ref="16" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item3>
+  </Bands>
+  <ObjectStorage>
+    <Item1 Ref="2" ObjectType="DevExpress.XtraReports.Parameters.RangeParametersSettings, DevExpress.Printing.v21.2.Core" StartParameter="#Ref-17" EndParameter="#Ref-18" />
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.2" Ref="3" Content="System.DateTime" Type="System.Type" />
+    <Item3 Ref="17" ObjectType="DevExpress.XtraReports.Parameters.RangeStartParameter, DevExpress.Printing.v21.2.Core" ValueInfo="2021-11-03" Name="orderDates_Start" />
+    <Item4 Ref="18" ObjectType="DevExpress.XtraReports.Parameters.RangeEndParameter, DevExpress.Printing.v21.2.Core" ValueInfo="2021-11-03" Name="orderDates_End" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
