@@ -1,3 +1,4 @@
+using DevExpress.XtraReports.Web.WebDocumentViewer;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebDocumentViewerCustomizeParametersPanel.Controllers {
@@ -9,9 +10,14 @@ namespace WebDocumentViewerCustomizeParametersPanel.Controllers {
             Models.ErrorModel model = new Models.ErrorModel();
             return View(model);
         }
+        
 
-        public IActionResult Viewer() {
-            return View();
+        public IActionResult DocumentViewer(
+            [FromServices] IWebDocumentViewerClientSideModelGenerator viewerModelGenerator,
+            [FromQuery] string reportName) {
+            reportName = string.IsNullOrEmpty(reportName) ? "TestReport" : reportName;
+            var viewerModel = viewerModelGenerator.GetModel(reportName, CustomWebDocumentViewerController.DefaultUri);
+            return View(viewerModel);
         }
     }
 }

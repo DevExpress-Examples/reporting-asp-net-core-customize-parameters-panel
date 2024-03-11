@@ -1,18 +1,12 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using DevExpress.XtraReports.Expressions;
+using DevExpress.XtraReports.Parameters;
+using DevExpress.XtraReports.Services;
 using DevExpress.XtraReports.UI;
 using WebDocumentViewerCustomizeParametersPanel.PredefinedReports;
-using WebDocumentViewerCustomizeParametersPanel.Data;
-using DevExpress.XtraReports.Services;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraReports.Expressions;
 
-namespace WebDocumentViewerCustomizeParametersPanel.Services
-{
+namespace WebDocumentViewerCustomizeParametersPanel.Services {
     public class CustomReportProvider : IReportProvider {
-        public XtraReport GetReport(string id, ReportProviderContext context)
-        {
+        public XtraReport GetReport(string id, ReportProviderContext context) {
             if (id == "TestReport") {
                 var report = new TestReport();
                 ParameterPanelFluentBuilder.Begin(report)
